@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class aboutMe extends Component{
+  state = {
+    nome: "Daniel",
+    idade: 19,
+    comida: "Empadão",
+    msc: ["Flight 22", "Solita", "la luz"],
+  };
+
+  render(){
+    return(
+      <div>
+        <h1>{this.state.nome}</h1>
+        <h2>{this.state.idade}</h2>
+        <h3>{this.state.comida}</h3>
+        <ul>
+          <li>{this.state.msc[1]}</li>
+          <li>{this.state.msc[0]}</li>
+          <li>{this.state.msc[2]}</li>
+        </ul>
+        <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/07/Foto-Apple-Ma%C3%A7a-PNG.png" alt="maçã" />
+      </div>
+    )
+  }
 }
 
-export default App;
+export default aboutMe
